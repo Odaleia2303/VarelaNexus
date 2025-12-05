@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fundamentos de Redes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="menu-superior">
+  <img src="./logo.png" alt="logo" />
+  <h1 class="logo">Varela Nexus</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="bancodados.html">Fundamentos de Banco de Dados</a></li>
+      <li><a href="eletronica.html">Fundamentos de Eletroeletrônica</a></li>
+      <li><a href="tecinfo.html">Fundamentos de Tecnologia da Informação</a></li>
+      <li><a href="computacional.html">Lógica Computacional</a></li>
+      <li><a href="programacao.html">Lógica de Programação</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="conteudo-principal">
+  <h2>Fundamentos de Redes</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>1. O que são Redes de Computadores?</h3>
+      <p>São estruturas que conectam dispositivos para trocar informações, permitindo comunicação, compartilhamento de arquivos, internet e serviços.</p>
+    </div>
+
+    <div class="card">
+      <h3>2. O que é uma Rede Mínima?</h3>
+      <p>É o menor tipo de rede possível: apenas dois computadores conectados entre si.</p>
+    </div>
+
+    <div class="card">
+      <h3>3. O que é a Internet? O que compõe?</h3>
+      <pre>A Internet é a maior rede do mundo.
+Ela é composta por:
+• Cabos de fibra óptica (submarinos e terrestres)
+• Roteadores e switches
+• Provedores de internet (ISP)
+• Servidores
+• Satélites e radiofrequência
+• Protocolos de comunicação (TCP/IP)</pre>
+    </div>
+
+    <div class="card">
+      <h3>4. O que é Web?</h3>
+      <p>É o conjunto de sites, páginas e serviços acessados via navegador usando HTTP/HTTPS.</p>
+    </div>
+
+    <div class="card">
+      <h3>5. Mapa Global de Fibra Óptica</h3>
+      <p>A fibra óptica conecta continentes e permite internet em alta velocidade.</p>
+      <img src="./imgSA/fibraOptica.png" alt="FibraOptica" style="width:100%; border-radius:10px;">
+      
+    </div>
+
+    <div class="card">
+      <h3>6. Componentes de Hardware de uma Rede Wi-Fi</h3>
+      <pre>• Roteador Wi-Fi
+• Antenas
+• Modem
+• Repetidores
+• Placas Wi-Fi (PCs e celulares)</pre>
+    </div>
+
+    <div class="card">
+      <h3>7. Hardware de Rede com Cabo</h3>
+      <pre>• Switch
+• Roteador
+• Modem
+• Cabos Ethernet (Cat5, Cat6)
+• Placas de Rede</pre>
+    </div>
+
+    <div class="card">
+      <h3>8. O que é Protocolo de Comunicação?</h3>
+      <p>Conjunto de regras que definem como os dados são transmitidos na rede.</p>
+    </div>
+
+    <div class="card">
+      <h3>9. Modelo OSI</h3>
+      <pre>Modelo teórico com 7 camadas:
+1 - Física
+2 - Enlace
+3 - Rede
+4 - Transporte
+5 - Sessão
+6 - Apresentação
+7 - Aplicação</pre>
+    </div>
+
+    <div class="card">
+      <h3>10. Modelo TCP/IP</h3>
+      <pre>Modelo usado na Internet:
+• Aplicação
+• Transporte
+• Rede
+• Enlace</pre>
+    </div>
+
+    <div class="card">
+      <h3>11. IPv4 e IPv6</h3>
+      <pre>IPv4: 32 bits — Ex.: 192.168.0.1
+IPv6: 128 bits — Ex.: 2001:0db8:85a3::8a2e</pre>
+    </div>
+
+    <div class="card">
+      <h3>12. Configuração de IP e TCP em Node.js</h3>
+      <pre><code>const net = require('net');
+const server = net.createServer();
+server.listen(3000, '127.0.0.1');
+console.log('Servidor ativo');</code></pre>
+    </div>
+
+    <div class="card">
+      <h3>13. O que é HTTP?</h3>
+      <p>Protocolo usado para transferir páginas e dados na Web.</p>
+    </div>
+
+    <div class="card">
+      <h3>14. O que é HTTPS?</h3>
+      <p>É a versão segura do HTTP, usando criptografia SSL/TLS.</p>
+    </div>
+
+    <div class="card">
+      <h3>15. Framework HTTP em Node.js</h3>
+      <pre>Express.js — usado para criar APIs e servidores Web.</pre>
+    </div>
+
+    <div class="card">
+      <h3>16. Exemplos Backend (Node.js)</h3>
+      <pre><code>// 1 - Enviar texto
+app.get('/msg', (req, res) => {
+  res.send('Olá Front!');
+});
+
+// 2 - Receber dados do front
+app.post('/dados', (req, res) => {
+  console.log(req.body);
+  res.send('Dados recebidos');
+});
+
+// 3 - Enviar JSON
+app.get('/json', (req, res) => {
+  res.json({ status: 'ok', mensagem: 'Teste' });
+});</code></pre>
+    </div>
+
+        <div class="card">
+            <h3>17. Video Arduino</h3>
+            <pre>  <div class="video-container">
+     <video src="./imgSA/videoeletroeletronica.MOV" controls></video>
+         </div>
+           </pre>
+          </div>
+        
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 Varela Nexus - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,356 @@
+
+
+/* --- Definição de Cores (Variáveis) --- */
+:root {
+    --color-pink: #ff6699;      /* Rosa Vibrante (Primária) */
+    --color-orange: #ff9966;    /* Laranja Vivo (Secundária) */
+    --color-yellow: #ffcc66;    /* Amarelo Suave (Destaque) */
+    --color-dark: #333333;      /* Texto Escuro */
+    --color-light: #ffffff;     /* Fundo de Card/Texto Claro */
+}
+
+/* ----------------------------------- */
+/* FUNDO ABSTRATO ( BODY ) - IGUAL À FOTO */
+/* ----------------------------------- */
+
+body {
+    /* Gradiente em si: usa as cores da foto com um ângulo diagonal */
+    background: linear-gradient(-45deg, var(--color-pink), var(--color-orange), var(--color-yellow), var(--color-pink));
+    background-size: 400% 400%; /* Aumenta o tamanho para permitir a animação de movimento */
+    animation: gradientAnimation 15s ease infinite; /* Aplica a animação */
+    
+    color: var(--color-dark);
+    line-height: 1.6;
+    min-height: 100vh; /* Garante que o gradiente cubra toda a altura da tela */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Animação que move o fundo gradiente, criando o efeito "fluido" */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+video {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%; /* opcional, deixa responsivo */
+}
+
+/* ----------------------------------- */
+/* Estilos Globais e Reset            */
+/* ----------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Links em geral (melhora a visibilidade no fundo colorido) */
+a {
+    color: var(--color-light);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 600;
+}
+
+a:hover {
+    color: var(--color-yellow);
+}
+
+/* ----------------------------------- */
+/* Menu Superior (Header)     */
+/* ----------------------------------- */
+
+.menu-superior {
+    /* Header transparente para mostrar o gradiente do body, mas com um toque */
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo branco semi-transparente */
+    backdrop-filter: blur(5px); /* Efeito de vidro fosco (Glassmorphism) */
+    color: var(--color-light);
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Mantém o menu no topo ao rolar */
+    top: 0;
+    z-index: 100;
+}
+
+.menu-superior img {
+    height: 200px;
+    width: auto;
+    
+}
+
+.logo {
+    font-size:5rem;
+    font-weight: 700;
+    color: var(--color-light);
+  
+}
+
+.menu-superior nav ul {
+    list-style: none;
+    display: grid;
+}
+
+.menu-superior nav ul li {
+    margin-left: 30px;
+}
+
+.menu-superior nav ul li a {
+    color: var(--color-light);
+    text-transform: uppercase;
+    position: relative;
+    padding: 5px 0;
+}
+
+.menu-superior nav ul li a:hover {
+    color: var(--color-yellow);
+}
+
+/* ----------------------------------- */
+/* Conteúdo Principal (Main)  */
+/* ----------------------------------- */
+
+.conteudo-principal {
+    padding: 50px 5%;
+}
+
+/* Título da Seção (h2) */
+.conteudo-principal h2 {
+    font-size: 2.5em;
+    color: var(--color-light); /* Título branco para contraste */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+    position: relative;
+    font-weight: 700;
+}
+
+/* ----------------------------------- */
+/* Cards (Grid)            */
+/* ----------------------------------- */
+
+.cards {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 50px;
+}
+
+
+.card {
+    /* Efeito de card "flutuante" no fundo colorido */
+    background-color: rgba(255, 255, 255, 0.95); /* Quase branco, levemente transparente */
+    padding: 30px;
+    border-radius: 20px; /* Cantos bem arredondados */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); 
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borda sutil */
+    z-index: 1;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Elevação maior */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    color: var(--color-pink);
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-orange); /* Destaque laranja no H3 */
+}
+
+.card p {
+    font-size: 1em;
+    color: var(--color-dark);
+    margin-top: 10px;
+}
+.cardscad {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 50px;
+}
+
+
+.cardcad {
+    /* Efeito de card "flutuante" no fundo colorido */
+    background-color: rgba(255, 255, 255, 0.95); /* Quase branco, levemente transparente */
+    padding: 30px;
+    border-radius: 20px; /* Cantos bem arredondados */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); 
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borda sutil */
+    z-index: 1;
+}
+
+.cardcad:hover {
+    transform: translateY(-10px); /* Elevação maior */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.cardcad h3 {
+    color: var(--color-pink);
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-orange); /* Destaque laranja no H3 */
+}
+
+.cardcad p {
+    font-size: 1em;
+    color: var(--color-dark);
+    margin-top: 10px;
+}
+
+/* ---- CARD LEI DE OHM ---- */
+.card input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.card label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+.card button {
+  background-color: #005eff;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  font-size: 15px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background-color: #003fbe;
+}
+
+#resultadoOhm {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  padding: 8px;
+  background: #e6f0ff;
+  border-left: 4px solid #005eff;
+  border-radius: 4px;
+}
+
+/* ----------------------------------- */
+/* Elementos Específicos       */
+/* ----------------------------------- */
+
+/* Bloco de Código (PRE) - Mantém visibilidade */
+.card pre {
+    background-color: #fcebeb; /* Rosa bem clarinho */
+    border: 1px solid var(--color-pink);
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Consolas', monospace;
+    font-size: 0.9em;
+    margin-top: 15px;
+    color: #555;
+}
+
+
+
+/* Botões com Gradiente e Visibilidade Aumentada */
+.card button[type="submit"],
+.card button {
+    background: linear-gradient(90deg, var(--color-pink) 0%, var(--color-orange) 100%);
+    color: var(--color-light);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 700; /* Mais negrito */
+    margin-top: 10px;
+    transition: opacity 0.3s, transform 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 102, 153, 0.6); /* Sombra mais forte */
+}
+
+.card button[type="submit"]:hover,
+.card button:hover {
+    opacity: 0.95;
+    transform: scale(1.02); /* Leve aumento */
+    box-shadow: 0 6px 20px rgba(255, 102, 153, 0.8);
+}
+
+
+/* ----------------------------------- */
+/* Rodapé (Footer) - Sem Fundo Preto  */
+/* ----------------------------------- */
+
+footer {
+    /* Rodapé transparente/claro no fundo colorido */
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    color: var(--color-dark);
+    text-align: center;
+    padding: 20px 5%;
+    margin-top: 50px;
+    font-size: 0.9em;
+    font-weight: 600;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ----------------------------------- */
+/* Responsividade */
+/* ----------------------------------- */
+
+@media (max-width: 800px) {
+    .menu-superior {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-superior nav {
+        margin-top: 15px;
+    }
+
+    .menu-superior nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu-superior nav ul li {
+        margin: 5px 10px;
+    }
+
+    .conteudo-principal {
+        padding: 30px 5%;
+    }
+
+    .conteudo-principal h2 {
+        font-size: 2em;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}

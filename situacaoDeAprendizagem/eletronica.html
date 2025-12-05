@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos de Eletroeletrônica</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./eletronica.js"defer></script>
+</head>
+<body>
+
+  <header class="menu-superior">
+      <img src="./logo.png" alt="">
+      <h1 class="logo">Varela Nexus</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="bancodados.html">Fundamentos de Banco de Dados</a></li>
+          <li><a href="redes.html">Fundamentos de Redes</a></li>
+          <li><a href="tecinfo.html">Fundamentos de Tecnologia da Informação</a></li>
+          <li><a href="computacional.html">Lógica Computacional</a></li>
+          <li><a href="programacao.html">Lógica de Programação</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <main class="conteudo-principal">
+
+    <section id="eletroeletronica">
+      <h2>Fundamentos de Eletroeletrônica</h2>
+      <div class="cards">
+
+        <div class="card">
+            <h3>1. Componentes Eletrônicos</h3>
+            <p>Principais componentes usados em eletrônica:</p>
+            <pre>• Resistor: limita a corrente elétrica.
+• Diodo LED: emite luz quando corrente passa.
+• Transistor: amplifica ou comuta sinais.
+• Circuito Integrado: conjunto de componentes em um chip.</pre>
+        </div>
+
+        <div class="card">
+            <h3>2. Sensores Automatizados</h3>
+            <p>Sensores comuns em automação:</p>
+            <pre>• Temperatura (ex: LM35)
+• Umidade (ex: DHT11)
+• Luminosidade (LDR)
+• Presença (PIR)
+• Gás (MQ-2)</pre>
+        </div>
+
+        <div class="card">
+            <h3>3. O que é Arduino?</h3>
+            <pre>O Arduino é uma plataforma de prototipagem eletrônica.
+Aplicações: robôs, automação residencial, sensores.
+Vantagens: barato, fácil de programar.
+Desvantagens: limitado em processamento.</pre>
+        </div>
+
+        <div class="card">
+            <h3>4. Funcionamento e Eletrônica Embarcada</h3>
+            <pre>Ele funciona lendo entradas e controlando saídas.
+Eletrônica embarcada: eletrônica + software em dispositivos.</pre>
+        </div>
+
+        <div class="card">
+            <h3>5. Linguagem do Arduino</h3>
+            <pre>A linguagem principal é C/C++.
+Também aceita Python com MicroPython (placas específicas).</pre>
+        </div>
+
+        <div class="card">
+            <h3>6. Entradas e Saídas Digitais</h3>
+            <pre>Digitais só têm 0 ou 1 (LOW/HIGH).
+Exemplos: botões, LEDs.</pre>
+        </div>
+
+        <div class="card">
+            <h3>7. Entradas e Saídas Analógicas</h3>
+            <pre>Analógicas variam de 0 a 1023 no Arduino.
+Exemplos: LDR, potenciômetro.</pre>
+        </div>
+
+      <div class="card">
+  <h3>8. Cálculo pela Lei de Ohm</h3>
+
+  <label>Tensão (V):</label>
+  <input type="number" id="tensao" placeholder="Ex: 12">
+
+  <label>Corrente (A):</label>
+  <input type="number" id="corrente" placeholder="Ex: 2">
+
+  <label>Resistência (Ω):</label>
+  <input type="number" id="resistencia" placeholder="Ex: 6">
+
+  <button onclick="calcularOhm()">Calcular</button>
+
+  <p id="resultadoOhm"></p>
+</div>
+
+        <div class="card">
+            <h3>10. Leitura de Sensor + Saída Digital</h3>
+            <pre><code>int sensor = A0;
+int led = 7;
+void loop(){
+ int valor = analogRead(sensor);
+ if(valor > 500) digitalWrite(led, HIGH);
+ else digitalWrite(led, LOW);
+}</code></pre>
+        </div>
+
+        <div class="card">
+            <h3>11. Diodo, LED e Display 7 segmentos</h3>
+            <pre>• Diodo: permite corrente em 1 direção.
+• LED: diodo emissor de luz.
+• Display 7 segmentos: mostra números usando 7 LEDs.</pre>
+        </div>
+      
+
+
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Varela Nexus - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>

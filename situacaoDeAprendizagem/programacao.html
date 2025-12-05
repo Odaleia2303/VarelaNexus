@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Varela Nexus</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./programacao.js"defer></script>
+</head>
+<body>
+
+  <header class="menu-superior">
+      <img src="./logo.png" alt="">
+    <h1 class="logo">Varela Nexus</h1>
+    <nav>
+      <ul>
+   
+        
+        <li><a href="./index.html">Início</a></li>
+        <li><a href="bancodados.html">Fundamentos de Banco de Dados</a></li>
+        <li><a href="eletronica.html">Fundamentos de Eletroeletrônica</a></li>
+        <li><a href="redes.html">Fundamentos de Redes</a></li>
+        <li><a href="tecinfo.html">Fundamentos de Tecnologia da Informação</a></li>
+        <li><a href="computacional.html">Lógica Computacional</a></li>
+ 
+
+      </ul>
+    </nav>
+  </header>
+
+
+<main class="conteudo-principal">
+<section id="logica">
+  <h2>Lógica de Programação</h2>
+
+  <div class="cards">
+
+    <!-- 1 - Linguagens -->
+    <div class="card">
+      <h3>1. O que são Linguagens de Programação?</h3>
+      <p>São conjuntos de regras usadas para criar programas. Servem para dar instruções ao computador.</p>
+      <p><b>C++:</b> Compilada, muito rápida, usada em sistemas e jogos.</p>
+      <p><b>JavaScript:</b> Interpretada, usada na web.</p>
+      <p><b>Java:</b> Orientada a objetos, usada em empresas.</p>
+      <p><b>Python:</b> Interpretada, simples e usada em IA.</p>
+      <p><b>PHP:</b> Muito usada em back-end web.</p>
+    </div>
+
+    <!-- 2 - Interpretada x Compilada -->
+    <div class="card">
+      <h3>2. Interpretada x Compilada</h3>
+      <p><b>Interpretada:</b> executada linha por linha (JS, Python, PHP).</p>
+      <p><b>Compilada:</b> convertida para código de máquina antes (C++, Java).</p>
+    </div>
+
+    <!-- 3 - HTML e CSS -->
+    <div class="card">
+      <h3>3. O que é HTML e CSS?</h3>
+      <p><b>HTML:</b> Linguagem usada para estruturar páginas web.</p>
+      <p><b>CSS:</b> Linguagem usada para estilizar páginas web.</p>
+    </div>
+
+    <!-- 4 - IDE -->
+    <div class="card">
+      <h3>4. O que é uma IDE?</h3>
+      <p>IDE é um ambiente de desenvolvimento com ferramentas para programar.</p>
+      <p>Exemplos: VSCode, IntelliJ, NetBeans.</p>
+    </div>
+
+    <!-- 5 - Ordenação 1 a 20 -->
+    <div class="card">
+      <h3>5. Ordenar números de 1 a 20</h3>
+      <button onclick="ordenarCrescente()">Crescente</button>
+      <button onclick="ordenarDecrescente()">Decrescente</button>
+      <p id="resultadoOrdem"></p>
+    </div>
+
+    <!-- 6 - Bubble Sort -->
+    <div class="card">
+      <h3>6. Bubble Sort (10 números aleatórios)</h3>
+      <button onclick="bubbleSort()">Gerar e Ordenar</button>
+      <p id="resultadoBubble"></p>
+    </div>
+
+    <!-- 7 - Soma array -->
+    <div class="card">
+      <h3>7. Soma de 10 números aleatórios</h3>
+      <button onclick="somarArray()">Somar</button>
+      <p id="resultadoSoma"></p>
+    </div>
+
+    <!-- 8 - Matriz 3x3 -->
+    <div class="card">
+      <h3>8. Matriz 3x3 Aleatória</h3>
+      <button onclick="gerarMatriz()">Gerar Matriz</button>
+      <pre id="resultadoMatriz"></pre>
+    </div>
+
+    <!-- 9 - IMC -->
+    <div class="card">
+      <h3>9. Cálculo de IMC</h3>
+      <input type="number" id="peso" placeholder="Peso (kg)" step="0.01">
+      <input type="number" id="altura" placeholder="Altura (m)" step="0.01">
+      <button onclick="calcularIMC()">Calcular</button>
+      <p id="resultadoIMC"></p>
+    </div>
+
+    <!-- 10 - Converter temperatura -->
+    <div class="card">
+      <h3>10. Conversor de Temperatura</h3>
+      <input type="number" id="temp" placeholder="Temperatura" step="0.1">
+      <select id="tipoTemp">
+        <option value="c">Celsius → Fahrenheit</option>
+        <option value="f">Fahrenheit → Celsius</option>
+      </select>
+      <button onclick="converterTemp()">Converter</button>
+      <p id="resultadoTemp"></p>
+    </div>
+
+    <!-- 11 - Busca Linear -->
+    <div class="card">
+      <h3>11. Busca Linear</h3>
+      <p>Busca linear percorre cada elemento até encontrar o valor desejado.</p>
+      <button onclick="buscaLinear()">Executar Busca</button>
+      <p id="resultadoBusca"></p>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>© 2025 - Varela Nexus</p>
+</footer>
+
+<script src="logica.js"></script>
+</body>
+</html>
